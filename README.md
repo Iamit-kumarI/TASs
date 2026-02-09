@@ -17,8 +17,8 @@ Check backend capacity
 ⬇️
 
 (🧠Logic)
-If free → dispatch immediately🔀🔄️
-Else → enqueue 
+If free → dispatch immediately🔀️
+Else → enqueue 🔄
 
 
 Worker sends request to backend
