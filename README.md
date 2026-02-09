@@ -1,4 +1,4 @@
-# TASs(Request Flow)
+# TASs ( Request Flow ⏳)
 User clicks "Buy"⬇️
 
 Load Balancer
