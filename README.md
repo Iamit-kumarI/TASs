@@ -190,7 +190,7 @@ Kubernetes autoscaling **reacts** — it sees a CPU spike, then spins up new pod
 - **Chain of Responsibility** — Monitor → RateLimiter → Queue, each layer can reject
 - **Facade** — Controller hides all complexity behind a single `/buy` endpoint
 
-### What would we will add next? (coming up)
+### we will add next? (coming up)
 - Replace in-memory queue with **Kafka** for distributed scaling across pods
 - Add **Resilience4j** circuit breaker for downstream failures
 - **Prometheus + Grafana** dashboard off the `/metrics` endpoint
