@@ -10,7 +10,7 @@ public class BuyService {
         log.info("[{}] Processing buy on thread: {}", requestId, Thread.currentThread().getName());
         try {
             // Simulating actual purchase processing work
-            Thread.sleep(100);
+            Thread.sleep(300);
             log.info("[{}] Buy processed successfully", requestId);
         } catch (InterruptedException e) {
             log.error("[{}] Buy processing interrupted", requestId, e);

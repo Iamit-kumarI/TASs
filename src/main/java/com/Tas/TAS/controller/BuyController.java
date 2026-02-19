@@ -37,7 +37,7 @@ public class BuyController {
             log.warn("[{}] Rate limit exceeded", requestId);
             return ResponseEntity.status(HttpStatus.TOO_MANY_REQUESTS)
                     .body(ApiResponse.fail("Rate limit exceeded. Max " +
-                            rateLimiter.getMaxRequestsPerSecond() + " requests/sec. Try again shortly."));
+                            rateLimiter.getMaxRequestsPerSecond() + " requests/sec. Try again..."));
         }
 
         boolean queued = requestQueue.enqueue(() -> buyService.procesBuy(requestId));

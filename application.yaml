@@ -1,0 +1,24 @@
+#  "Kubernetes and this system solve different problems — they work at different layers. Kubernetes is infrastructure-level orchestration. This is application-level traffic control. You actually need both."
+#
+#    The Analogy That Wins
+#
+#    "Think of a restaurant. Kubernetes is the manager who opens new restaurant branches when one gets too crowded. My system is the queue manager standing at the door of a single branch — deciding who gets a table, who waits, and turning people away politely when it's truly full.
+#Even if you have 10 branches, each branch still needs a queue manager. Kubernetes doesn't stop 10,000 requests from hammering a single pod simultaneously — your application code has to handle that."
+#
+#
+#    Point by Point If They Push Back
+#    What Kubernetes DoesWhat Your System DoesSpins up more pods when CPU is highControls traffic before CPU gets highWorks at infrastructure levelWorks at application code levelTakes 30–60 seconds to scale upReacts in millisecondsHandles traffic after a spike hitsHandles traffic during the spikeDoesn't know your business logicCan apply custom rules per endpoint
+#
+#    The Key Technical Point
+#
+#    "Kubernetes autoscaling reacts — it sees CPU spike, then spins up pods. That takes 30 to 60 seconds minimum. In a flash sale, your server gets crushed in the first 5 seconds. My rate limiter and queue respond in microseconds. They protect the system while Kubernetes is still waking up new pods."
+#
+#
+#    How to Show You Understand Both
+#
+#    "In production, I'd use both together. Kubernetes handles horizontal scaling — spinning up more instances of this service. But each instance still runs its own rate limiter and queue. Actually, for a distributed setup, I'd evolve this further — move the queue to Kafka so all instances share one queue instead of having separate ones per pod."
+#
+#
+#    The Line That Closes the Argument
+#
+#    "Kubernetes is ops-level. This is code-level. A senior engineer needs to understand and own both layers. Relying only on Kubernetes means you're asking your infrastructure team to solve what should be an application design problem."
