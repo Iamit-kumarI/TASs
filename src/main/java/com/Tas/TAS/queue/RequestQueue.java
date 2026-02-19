@@ -12,7 +12,12 @@ public class RequestQueue {
 
     private BlockingDeque<Runnable>queue=new LinkedBlockingDeque<>(maxQueueSize);
     public boolean enqueue(Runnable task){
-        return queue.offer(task);
+        if(!queue.offer(task)){
+            System.out.println("Request Denied!, Queue is full...");
+            return false;
+        }
+//        return queue.offer(task); //loggin the error queue full
+        return true;
     }
     private final ExecutorService executor= Executors.newFixedThreadPool(5);//we can incress this no if needed more thred
 
