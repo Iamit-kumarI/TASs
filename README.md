@@ -170,8 +170,6 @@ com.Tas.TAS/
 
 ---
 
-## Interview Talking Points
-
 ### What problem does this solve?
 During a flash sale, thousands of requests hit `/buy` simultaneously. Without protection, the server crashes. This system handles that with three layers: count traffic, reject excess, queue the rest.
 
